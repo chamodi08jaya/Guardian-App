@@ -9,7 +9,7 @@ In there we transmit the location of the person using GPS transmit to the pre se
 In there we can discretely record the audio and video of the situation.
 Immediately send that recorded data to the emergency contacts and store the data as evidance in the cloud.
 
-Step 1: Registration using mobile number
+Step 1: Registration using mobile number\n
 Step 2: Pin sent to mobile and communication
 Step 3: Bluetooth pairing with smart device.
 Step 4: Add emergency Contacts
