@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/Screens/search_device.dart';
 import 'package:flutter_app/Widgets/label_text_form_field.dart';
 import 'package:pin_input_text_field/pin_input_text_field.dart';
 
@@ -16,20 +17,20 @@ class _MainScreenState extends State<MainScreen> {
     );
   }
 
-  Widget _otpLogin(){
+  Widget _otpLogin() {
     return AlertDialog(
       title: Text("OTP confirmation"),
       content: SingleChildScrollView(
         child: ListBody(
           children: <Widget>[
             PinInputTextField(
-          pinLength: 4,
-          autoFocus: true,
-          textInputAction: TextInputAction.go,
-          onSubmit: (pin) {
-            debugPrint('submit pin:$pin');
-          },
-        )
+              pinLength: 4,
+              autoFocus: true,
+              textInputAction: TextInputAction.go,
+              onSubmit: (pin) {
+                debugPrint('submit pin:$pin');
+              },
+            )
           ],
         ),
       ),
@@ -40,7 +41,23 @@ class _MainScreenState extends State<MainScreen> {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8),
           ),
-          onPressed: (){},
+          onPressed: () {
+            Navigator.pushReplacement(context, MaterialPageRoute(
+              builder: (context)=>SearchDevice()
+            ));
+          },
+        ),
+         FlatButton(
+          child: Text("Resend"),
+          color: Colors.indigo,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8),
+          ),
+          onPressed: () {
+            Navigator.pushReplacement(context, MaterialPageRoute(
+              builder: (context)=>SearchDevice()
+            ));
+          },
         )
       ],
     );
@@ -54,7 +71,7 @@ class _MainScreenState extends State<MainScreen> {
           backgroundColor: Colors.indigo,
           elevation: 0,
         ),
-        SizedBox(height: 40),
+        SizedBox(height: MediaQuery.of(context).size.height/8),
         Text(
           "Welcome to Guardian app",
           style: TextStyle(
@@ -71,7 +88,7 @@ class _MainScreenState extends State<MainScreen> {
           labelText: "Username",
         ),
         SizedBox(
-          height: 20,
+          height: MediaQuery.of(context).size.height/25,
         ),
         LabelTextField(
           hintText: "Enter mobile number",
@@ -90,11 +107,10 @@ class _MainScreenState extends State<MainScreen> {
             ),
             onPressed: () {
               showDialog(
-                context: context,
-                builder: (BuildContext context){
-                  return _otpLogin();
-                }
-              );
+                  context: context,
+                  builder: (BuildContext context) {
+                    return _otpLogin();
+                  });
             },
             color: Colors.indigo,
             shape:
