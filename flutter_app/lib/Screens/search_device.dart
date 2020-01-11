@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/Screens/instruction_screen.dart';
 
 class SearchDevice extends StatefulWidget {
   @override
@@ -39,7 +40,11 @@ class _SearchDeviceState extends State<SearchDevice> {
           Center(
             child: IconButton(
               icon: Icon(Icons.search),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,MaterialPageRoute(
+                  builder: (context)=>InstructionScreen()
+                ));
+              },
               iconSize: 250,
               color: Colors.indigo,
             ),
@@ -56,7 +61,11 @@ class _SearchDeviceState extends State<SearchDevice> {
                 style: TextStyle(color: Colors.white),
               ),
               color: Colors.teal,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,MaterialPageRoute(
+                  builder: (context)=>InstructionScreen()
+                ));
+              },
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8)),
             ),
@@ -73,7 +82,11 @@ class _SearchDeviceState extends State<SearchDevice> {
                 style: TextStyle(color: Colors.white),
               ),
               color: Colors.red,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,MaterialPageRoute(
+                  builder: (context)=>InstructionScreen()
+                ));
+              },
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8)),
             ),
