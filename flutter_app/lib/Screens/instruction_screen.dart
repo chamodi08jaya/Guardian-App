@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/Screens/code_screen.dart';
+import 'package:flutter_app/Screens/core_screen.dart';
 
 class InstructionScreen extends StatefulWidget {
   @override
