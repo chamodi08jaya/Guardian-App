@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/Screens/code_screen.dart';
+import 'package:flutter_app/Screens/core_screen.dart';
 
 class InstructionScreen extends StatefulWidget {
   @override
@@ -33,51 +33,56 @@ class _InstructionScreenState extends State<InstructionScreen> {
         SizedBox(
           height: MediaQuery.of(context).size.height / 15,
         ),
-        Text(
-          "1.Use the smart device or wristband",
-          style: TextStyle(
-            fontSize: 18,
+        Center(
+          child: Text(
+            "1.Use the smart device or long press the power button to send alerts",
+            style: TextStyle(
+              fontSize: 18,
+            ),
           ),
         ),
         SizedBox(
           height: MediaQuery.of(context).size.height / 25,
         ),
-        Text(
-          "1.Use the smart device or wristband",
-          style: TextStyle(
-            fontSize: 18,
+        Center(
+          child: Text(
+            "2.Toggle between sending Voice/Images alerts through option menu",
+            style: TextStyle(
+              fontSize: 18,
+            ),
           ),
         ),
         SizedBox(
           height: MediaQuery.of(context).size.height / 25,
         ),
-        Text(
-          "1.Use the smart device or wristband",
-          style: TextStyle(
-            fontSize: 18,
+        Center(
+          child: Text(
+            "3.Upgrade premium to use cloud storage",
+            style: TextStyle(
+              fontSize: 18,
+            ),
           ),
         ),
         SizedBox(
           height: MediaQuery.of(context).size.height / 15,
         ),
         Center(
-              child: ButtonTheme(
-            minWidth: MediaQuery.of(context).size.width / 2,
-            child: FlatButton(
-              child: Text(
-                "Proceed",
-                style: TextStyle(color: Colors.white),
-              ),
-              color: Colors.green,
-              onPressed: () {
-                Navigator.push(context,MaterialPageRoute(
-                  builder: (context)=>CoreScreen()
-                ));
-              },
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8)),
+            child: ButtonTheme(
+          minWidth: MediaQuery.of(context).size.width / 2,
+          child: FlatButton(
+            child: Text(
+              "Proceed",
+              style: TextStyle(color: Colors.white),
             ),
-          ))
+            color: Colors.green,
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => CoreScreen()));
+            },
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+          ),
+        ))
       ],
     );
   }
