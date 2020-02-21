@@ -61,7 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           InkWell(
             onTap: (){},
-              child: Container(
+            child: Container(
             color: Colors.green,
             height: 60,
             width: MediaQuery.of(context).size.width/2,

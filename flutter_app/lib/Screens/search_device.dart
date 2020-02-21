@@ -19,7 +19,7 @@ class _SearchDeviceState extends State<SearchDevice> {
   }
 
   Widget _search_body() {
-    return Container(
+    return SingleChildScrollView(
       child: Column(
         children: <Widget>[
           SizedBox(

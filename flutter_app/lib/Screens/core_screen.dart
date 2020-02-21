@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/Screens/instruction_screen.dart';
+import 'Tabs/contact_screen.dart';
+import 'Tabs/home_screen.dart';
+import 'Tabs/option_screen.dart';
 
 class CoreScreen extends StatefulWidget {
   @override
@@ -30,10 +32,9 @@ class _CoreScreenState extends State<CoreScreen> {
   Widget _coreBody() {
     return TabBarView(
       children: <Widget>[
-        // InstructionScreen(),
-        Text("fndjf"),
-        Text("fndjf"),
-        Text("fndjf"),
+        HomeScreen(),
+        ContactScreen(),
+        OptionScreen(),
       ],
     );
   }
