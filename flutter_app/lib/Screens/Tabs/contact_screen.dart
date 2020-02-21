@@ -35,7 +35,10 @@ class _ContactScreenState extends State<ContactScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               IconButton(
-                icon: Icon(Icons.group_add,size: 100,),
+                icon: Icon(
+                  Icons.group_add,
+                  size: 100,
+                ),
                 onPressed: null,
               )
             ],
@@ -71,7 +74,6 @@ class _ContactScreenState extends State<ContactScreen> {
             title: Text("Srimali O"),
             trailing: Icon(Icons.add),
           ),
-        
         ],
       ),
     );
